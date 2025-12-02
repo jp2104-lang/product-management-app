@@ -1,20 +1,25 @@
-import React from "react";
-import { Link } from "react-router-dom";
-
 export default function Header() {
   return (
-    <header className="header card">
-      <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/OOjs_UI_icon_shopping-cart.svg" alt="logo" style={{ width: 36 }} />
-        <div>
-          <h1>Product Management App</h1>
-          <div className="small">React • Hooks • Router • Demo</div>
+    <div className="navbar bg-base-200 rounded-xl mb-4 shadow">
+      <div className="flex-1">
+        <div className="flex items-center gap-3">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/8/8e/OOjs_UI_icon_shopping-cart.svg"
+            className="w-10"
+          />
+          <div>
+            <h1 className="text-xl font-bold">Product Management App</h1>
+            <p className="text-xs opacity-70">React + DaisyUI</p>
+          </div>
         </div>
       </div>
-      <nav>
-        <Link to="/">Products</Link>
-        <Link to="/" style={{ marginLeft: 12 }}>Add Product</Link>
-      </nav>
-    </header>
+
+      <div className="flex-none">
+        <ul className="menu menu-horizontal px-1">
+          <li><a href="/">Products</a></li>
+          <li><a href="/">Add Product</a></li>
+        </ul>
+      </div>
+    </div>
   );
 }
